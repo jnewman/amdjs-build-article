@@ -1,0 +1,31 @@
+{
+  "name": "amdjs-build-article",
+  "description": "Example project that provides a how-to for using AMD w/ a sane build system.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jnewman/amdjs-build-article",
+  "author": {
+    "name": "Joshua Newman",
+    "email": "joshua.l.newman@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnewman/amdjs-build-article.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jnewman/amdjs-build-article/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jnewman/amdjs-build-article/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "src/article/main",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.16"
+  },
+  "keywords": []
+}
