@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    grunt.loadTasks("./node_modules/grunt-requirejs/tasks");
 
   // Project configuration.
   grunt.initConfig({
@@ -30,10 +31,26 @@ module.exports = function(grunt) {
       globals: {
         exports: true
       }
+    },
+    requirejs: {
+      name: "article",
+      dir: 'dist',
+      appDir: 'src',
+      baseUrl: '.',
+      paths: {
+          article: 'article/main'
+      },
+      pragmas: {
+          doExclude: true
+      },
+      skipModuleInsertion: false,
+      optimizeAllPluginResources: true,
+      findNestedDependencies: true
     }
   });
 
   // Default task.
   grunt.registerTask('default', 'lint test');
+  grunt.registerTask('release', 'lint test requirejs');
 
 };

@@ -1,6 +1,9 @@
 require({
     baseUrl: '.',
     packages: [
-        { name: 'article', location: 'article' }
+        {
+            name: 'article',
+            location: 'article'
+        }
     ]
-}, [ 'article' ]);
+}, ['article']);
