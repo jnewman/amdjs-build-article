@@ -1,4 +1,6 @@
 module.exports = function (grunt) {
+    'use strict';
+
     grunt.loadNpmTasks('grunt-requirejs');
     grunt.loadNpmTasks('grunt-clean');
     grunt.loadNpmTasks('grunt-jasmine-runner');
@@ -7,29 +9,29 @@ module.exports = function (grunt) {
     grunt.initConfig({
         clean: {
             dist: './dist',
-            junit: './junit'
+            junit: './junit',
+            spec: '_SpecRunner.html'
         },
         lint: {
-            files: ['grunt.js', 'src/**/*.js', 'src/*.js', 'test/**/*.js']
+            files: [
+                './grunt.js',
+                './src/run.js',
+                './src/article/**/*.js',
+                './test/**/*.js'
+            ]
         },
-        'jasmine' : {
+        'jasmine': {
             amd: true,
-            helpers : [
+            helpers: [
                 './src/requirejs/require.js',
                 './test/run.js'
             ],
-            junit : {
-                output : 'junit/'
-            },
-            phantomjs : {
-                'ignore-ssl-errors' : true
-            },
-            src : 'src/**/*.js',
-            specs : 'test/**/*.spec.js',
-            timeout : 10000
+            src: 'src/**/*.js',
+            specs: 'spec/**/*.js',
+            timeout: 10000
         },
-        'jasmine-server' : {
-            browser : false
+        'jasmine-server': {
+            browser: false
         },
         jshint: {
             options: {
@@ -46,7 +48,15 @@ module.exports = function (grunt) {
                 node: true
             },
             globals: {
-                exports: true
+                beforeEach: false,
+                define: false,
+                describe: false,
+                expect: false,
+                exports: true,
+                it: false,
+                jasmine: false,
+                require: false,
+                spyOn: false
             }
         },
         pkg: '<json:package.json>',

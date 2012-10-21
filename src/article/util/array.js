@@ -1,8 +1,8 @@
-/*global define, require, Array*/
-
 // Notice I can omit the module name. The loader assumes modules map to a file
 // path unless it's told otherwise.
 define(function () {
+    'use strict';
+
     // I could also have used the second argument to the factory. Vodori has decided to
     // list their modules at the top, since it's more Java like (and we use Java :-)).
     var methods = {},
