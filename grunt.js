@@ -2,7 +2,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-requirejs');
     grunt.loadNpmTasks('grunt-clean');
     grunt.loadNpmTasks('grunt-jasmine-runner');
-    grunt.loadNpmTasks('grunt-benchmark');
 
     // Project configuration.
     grunt.initConfig({
@@ -10,13 +9,8 @@ module.exports = function (grunt) {
             dist: './dist',
             junit: './junit'
         },
-        pkg: '<json:package.json>',
         lint: {
             files: ['grunt.js', 'src/**/*.js', 'src/*.js', 'test/**/*.js']
-        },
-        watch: {
-            files: '<config:lint.files>',
-            tasks: 'default'
         },
         'jasmine' : {
             amd: true,
@@ -55,7 +49,12 @@ module.exports = function (grunt) {
                 exports: true
             }
         },
-        requirejs: require('./profiles/article.profile').config
+        pkg: '<json:package.json>',
+        requirejs: require('./profiles/article.profile').config,
+        watch: {
+            files: '<config:lint.files>',
+            tasks: 'default'
+        }
     });
 
     // Default task.

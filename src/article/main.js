@@ -1,4 +1,4 @@
-require(['/src/article/util/array.js'], function (array) {
+require(['article/util/array'], function (array) {
     var title = array.map(['Build JS, ',  'World', '!'], function (item) {
         return item;
     }).join('');

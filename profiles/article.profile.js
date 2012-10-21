@@ -1,5 +1,5 @@
 exports.config = ({
-    name: "article",
+    name: 'article',
     dir: 'dist',
     appDir: 'src',
     baseUrl: '.',
@@ -8,10 +8,10 @@ exports.config = ({
             name: 'article'
         }
     ],
-        pragmas: {
+    pragmas: {
         doExclude: true
     },
     skipModuleInsertion: false,
-        optimizeAllPluginResources: true,
+    optimizeAllPluginResources: true,
     findNestedDependencies: true
 });

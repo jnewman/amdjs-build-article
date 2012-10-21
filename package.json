@@ -26,10 +26,9 @@
     },
     "devDependencies": {
         "grunt": "~0.3.16",
-        "grunt-benchmark": "~0.1.1",
         "grunt-clean": "~0.1.0",
         "grunt-jasmine-runner": "~0.6.0",
-        "grunt-requirejs": ">=0.2.12",
+        "grunt-requirejs": "~0.2.12",
         "http-server": "~0.1.0",
         "phantomjs": "~0.2.0",
         "uglify-js": "~1.3.3"
