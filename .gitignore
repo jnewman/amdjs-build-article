@@ -3,3 +3,6 @@ dist/*
 *.iml
 .idea
 .idea/*
+_SpecRunner.html
+node_modules
+node_modules/*

@@ -1,5 +1,9 @@
-require(['article/util/array'], function (array) {
-    console.log(array.map(['Hello, ',  'World', '!'], function (item) {
+require(['/src/article/util/array.js'], function (array) {
+    var title = array.map(['Build JS, ',  'World', '!'], function (item) {
         return item;
-    }).join(''));
+    }).join('');
+
+    // Just a quick test that we loaded right.
+    var h1 = document.getElementsByTagName('h1')[0];
+    h1.innerHTML = title;
 });
