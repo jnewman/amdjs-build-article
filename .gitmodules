@@ -1,3 +1,6 @@
 [submodule "src/requirejs"]
 	path = src/requirejs
 	url = git://github.com/jrburke/requirejs.git
+[submodule "src/mustache"]
+	path = src/mustache
+	url = https://github.com/janl/mustache.js.git
