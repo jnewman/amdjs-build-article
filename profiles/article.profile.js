@@ -11,12 +11,23 @@ exports.config = ({
     packages: [
         {
             name: 'article'
+        },
+        {
+            name: 'mustache',
+            // I'm setting main here, since mustache doesn't use the default, which would be mustache/main
+            main: 'mustache'
+        },
+        {
+            name: 'has',
+            // Same as Mustache
+            main: 'has'
         }
     ],
-    pragmas: {
-        doExclude: true
-    },
-    skipModuleInsertion: false,
-    optimizeAllPluginResources: true,
-    findNestedDependencies: true
+
+    // Code branching.
+    has: {
+        // All has('love-for-ie-6')'s in the code will be replaced w/ true, which lets UglifyJS of Closure-compiler remove
+        // the if statement around them.
+        'love-for-ie-6': true
+    }
 });

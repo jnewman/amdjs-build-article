@@ -1,10 +1,12 @@
-/*global document */
+/*global document, alert */
 require([
     'article/util/array',
-    'mustache'
+    'mustache',
+    'has'
 ], function (
     array,
-    mustache
+    mustache,
+    has
 ) {
     'use strict';
 
@@ -19,4 +21,11 @@ require([
     // Just a quick test that we loaded right.
     var h1 = document.getElementsByTagName('h1')[0];
     h1.innerHTML = title;
+
+    if (has('love-for-ie-6')) {
+        alert("I dislike you.");
+    }
+    else {
+        alert("You're awesome.");
+    }
 });

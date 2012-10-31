@@ -11,16 +11,23 @@ define(function () {
 
     var aProto = Array.prototype;
     var aSlice = aProto.slice;
+    var methodName = '';
 
-    EXPOSED.forEach(function (methodName) {
+    var makeMethod = function (name) {
+        return function (array) {
+            //noinspection JSReferencingMutableVariableFromClosure
+            return aProto[name].apply(array, aSlice.call(arguments, 1));
+        };
+    };
+
+    for (var i = 0, len = EXPOSED.length; i < len; ++i) {
+        methodName = EXPOSED[i];
         /**
          * Create a wrapper for whatever array methods are listed.
          * NOTE: This is not an appropriate real world solution.
          */
-        methods[methodName] = function (array) {
-            return aProto[methodName].apply(array, aSlice.call(arguments, 1));
-        };
-    });
+        methods[methodName] = makeMethod(methodName);
+    }
 
     return methods;
 });
