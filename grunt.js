@@ -17,21 +17,8 @@ module.exports = function (grunt) {
                 './grunt.js',
                 './src/run.js',
                 './src/article/**/*.js',
-                './test/**/*.js'
+                './spec/**/*.js'
             ]
-        },
-        'jasmine': {
-            amd: true,
-            helpers: [
-                './src/requirejs/require.js',
-                './test/run.js'
-            ],
-            src: 'src/**/*.js',
-            specs: 'spec/**/*.js',
-            timeout: 10000
-        },
-        'jasmine-server': {
-            browser: false
         },
         jshint: {
             options: {
