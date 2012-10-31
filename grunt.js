@@ -3,7 +3,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-requirejs');
     grunt.loadNpmTasks('grunt-clean');
-    grunt.loadNpmTasks('grunt-jasmine-runner');
 
     // Project configuration.
     grunt.initConfig({
@@ -55,7 +54,7 @@ module.exports = function (grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint jasmine');
-    grunt.registerTask('release', 'lint jasmine requirejs');
+    grunt.registerTask('default', 'lint');
+    grunt.registerTask('release', 'lint requirejs');
 
 };
