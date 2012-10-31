@@ -3,10 +3,8 @@
 define(function () {
     'use strict';
 
-    // I could also have used the second argument to the factory. Vodori has decided to
-    // list their modules at the top, since it's more Java like (and we use Java :-)).
     var methods = {},
-    // There are plenty of others, but I want to keep this brief.
+        // There are plenty of others, but I want to keep this brief.
         EXPOSED = ['map', 'forEach', 'every', 'some', 'reduce'];
 
     var aProto = Array.prototype;
