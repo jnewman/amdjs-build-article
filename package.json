@@ -25,12 +25,12 @@
         "test": "grunt test"
     },
     "devDependencies": {
-        "grunt": "~0.3.16",
-        "grunt-clean": "~0.1.0",
-        "grunt-requirejs": "~0.2.12",
-        "http-server": "~0.1.0",
-        "phantomjs": "~0.2.0",
-        "uglify-js": "~1.3.3"
+        "grunt": "~1.0.1",
+        "grunt-clean": "~0.4.0",
+        "grunt-requirejs": "~0.4.2",
+        "http-server": "~0.9.0",
+        "phantomjs": "~2.1.7",
+        "uglify-js": "~2.7.5"
     },
     "keywords": []
 }
